@@ -19,13 +19,31 @@ The following endpoints are available to use:
     * RESPONSE: Employee
 * READ
     * HTTP Method: GET 
-    * URL: localhost:8080/api/employee/{id}
+    * URL: localhost:8080/api/employee/{employeeId}
     * RESPONSE: Employee
 * UPDATE
     * HTTP Method: PUT 
-    * URL: localhost:8080/api/employee/{id}
+    * URL: localhost:8080/api/employee/{employeeId}
     * PAYLOAD: Employee
     * RESPONSE: Employee
+* getReportingStructure
+    * HTTP Method: GET
+    * URL: localhost:8080/api/reportingStructure/{employeeId}
+    * RESPONSE: ReportingStructure
+* getCompensation
+    * HTTP Method: GET
+    * URL: localhost:8080/api/compensation/{compensationId}
+    * RESPONSE: Compensation
+* createCompensation
+    * HTTP Method: POST
+    * URL: localhost:8080/api/compensation/{compensationId}
+    * PAYLOAD: Compensation
+    * RESPONSE: Compensation
+* getCompensationByEmployee
+    * HTTP Method: POST
+    * URL: localhost:8080/api/compensation/byEmployee/{employeeId}
+    * PAYLOAD: Compensation
+    * RESPONSE: Compensation
 ```
 The Employee has a JSON schema of:
 ```json
@@ -54,7 +72,6 @@ The Employee has a JSON schema of:
   }
 }
 ```
-For all endpoints that require an "id" in the URL, this is the "employeeId" field.
 
 ## What to Implement
 Clone or download the repository, do not fork it.
